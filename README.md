@@ -1,4 +1,4 @@
-# game-cusor
+# game-cursor
 
 > Little game with a cursor
 
