@@ -21,8 +21,11 @@
   </style>
 </head>
 <body>
+  <button class="handsfree-show-when-stopped" onclick="handsfree.start()">Start Webcam</button>
+  <button class="handsfree-show-when-started" onclick="handsfree.stop()">Stop Webcam</button>
   <div id="inputs"></div>
   <canvas id="canvas" width="500" height="500"></canvas>
+  <script src="https://unpkg.com/handsfree/dist/handsfree.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
