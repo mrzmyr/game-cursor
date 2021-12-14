@@ -1,4 +1,3 @@
-const handsfree = new Handsfree({ debug: false, hideCursor: true })
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 
@@ -141,17 +140,6 @@ class Player extends Particle {
     window.addEventListener('keydown', this._onKeyDown.bind(this))
     window.addEventListener('keyup', this._onKeyUp.bind(this))
     this._activeKeys = {};
-
-    handsfree.use({
-      name: 'myPlugin',
-      onFrame: function(poses) {
-        poses.forEach(function (pose) {
-          // Do things with pose here: @see https://handsfree.js.org/#/docs/plugins
-          this.x = pose.cursor.x * 2
-          this.y = pose.cursor.y * 2
-        }.bind(this))
-      }.bind(this)
-    })
   }
 
   _onKeyDown(e) {
